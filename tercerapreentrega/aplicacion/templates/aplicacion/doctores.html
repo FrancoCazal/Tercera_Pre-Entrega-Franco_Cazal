@@ -1,0 +1,54 @@
+{% extends "aplicacion/pagina.html" %}
+
+{% block titulo %}
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-uppercase text-dark mb-lg-4">Doctores</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+{% endblock titulo %}
+
+{% block contenido %}
+
+<table>
+    <tr>
+        <!-- Crear boton para añadir doctores -->
+        <td width="300"><h2>Añadir Doctor</h2></td>
+        <td>
+            <a href="{% url 'doc_create' %}"
+            class="btn btn-primary btn-sm"
+            ><i class="fa fa-plus fa-lg" title="Crear"> </i>
+            </a>
+        </td>
+    </tr>
+</table>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Número de Registro</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for d in doctores %}
+        <tr>
+            <td>{{ d.id }}</td>
+            <td>{{ d.nombre }}</td>
+            <td>{{ d.apellido }}</td>
+            <td>{{ d.nro_registro }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    
+{% endblock contenido %}
+    

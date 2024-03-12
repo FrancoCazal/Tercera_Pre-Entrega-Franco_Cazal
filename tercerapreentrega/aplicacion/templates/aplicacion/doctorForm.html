@@ -1,0 +1,29 @@
+{% extends "aplicacion/pagina.html" %}
+
+{% block titulo %}
+<div class="container-fluid bg-primary py-5 mb-5 hero-header">
+    <div class="container py-5">
+        <div class="row justify-content-start">
+            <div class="col-lg-8 text-center text-lg-start">
+                <h1 class="display-1 text-uppercase text-dark mb-lg-4">Doctores (Formulario)</h1>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<form action="" method="post">
+    <!-- Token para que la página no sea hackeada -->
+    {% csrf_token %}
+    <!-- Comentario -->
+    <table>
+        <!-- Renderiza el formulario que se le manda -->
+        {{form.as_table}}
+    </table>
+    <input type="submit" value = "Guardar">
+</form>
+
+{% endblock contenido %}

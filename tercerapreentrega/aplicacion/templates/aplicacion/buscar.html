@@ -1,0 +1,29 @@
+{% extends "aplicacion/pagina.html" %}
+
+{% block titulo %}
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-uppercase text-dark mb-lg-4">Búsqueda en la base de datos</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+<h2>Obs: la búsqueda se realiza en el campo 'nombre' y se devuelven todos los que contengan la cadena ingresada.</h2>
+{% endblock titulo %}
+
+
+
+{% block contenido %}
+
+<form action="{% url 'encontrar_datos' %}" method="get">
+    {% csrf_token %}
+    <p> Ingrese cadena a buscar: <input type="text" name="buscar" id="buscar"></p>
+    <input type="submit" value="Buscar">
+</form>
+
+{% endblock contenido %}

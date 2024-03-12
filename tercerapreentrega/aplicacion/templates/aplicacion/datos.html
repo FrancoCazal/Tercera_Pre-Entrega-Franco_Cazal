@@ -1,0 +1,108 @@
+{% extends "aplicacion/pagina.html" %}
+
+{% block titulo %}
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-uppercase text-dark mb-lg-4">Datos Encontrados</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+{% endblock titulo %}
+
+{% block contenido %}
+<h1>Doctores</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Número de Registro</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for d in doctores %}
+        <tr>
+            <td>{{ d.id }}</td>
+            <td>{{ d.nombre }}</td>
+            <td>{{ d.apellido }}</td>
+            <td>{{ d.nro_registro }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<h1>Funcionarios</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Función</th>
+            <th>Sueldo</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for f in funcionarios %}
+        <tr>
+            <td>{{ f.id }}</td>
+            <td>{{ f.nombre }}</td>
+            <td>{{ f.apellido }}</td>
+            <td>{{ f.funcion }}</td>
+            <td>{{ f.sueldo }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<h1>Clientes</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Número de Documento</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for c in clientes %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.apellido }}</td>
+            <td>{{ c.nro_documento }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<h1>Mascotas</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Especie</th>
+            <th>Raza</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for m in mascotas %}
+        <tr>
+            <td>{{ m.id }}</td>
+            <td>{{ m.nombre }}</td>
+            <td>{{ m.especie }}</td>
+            <td>{{ m.raza }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    
+{% endblock contenido %}
