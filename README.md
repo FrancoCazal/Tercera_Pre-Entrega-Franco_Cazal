@@ -1,6 +1,9 @@
 # **Tercera Pre-Entrega del Proyecto Final - Coderhouse**
 ## Alumno: Franco Cazal
 
+superuser: Franco
+contraseña: hola123
+
 # **Indicaciones Generales:**
 
 ## **Nombre del proyecto:** 'tercerapreentrega'
