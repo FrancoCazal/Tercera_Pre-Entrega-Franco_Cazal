@@ -8,11 +8,11 @@ contraseña: hola123
 
 - Simular un sistema de almacenamiento de datos interno de una clínica veterinaria
 
-# Modelos Usados: 
-- Doctor
-- Funcionario
-- Cliente
-- Mascota
+# Modelos Usados (atributos): 
+- Doctor: nombre, apellido, nro_registro
+- Funcionario: nombre, apellido, funcion, sueldo
+- Cliente: nombre, apellido, nro_documento
+- Mascota: nombre, especie, raza
 
 # **Indicaciones Generales:**
 
