@@ -4,6 +4,16 @@
 superuser: Franco
 contraseña: hola123
 
+# Objetivo
+
+- Simular un sistema de almacenamiento de datos interno de una clínica veterinaria
+
+# Modelos Usados: 
+- Doctor
+- Funcionario
+- Cliente
+- Mascota
+
 # **Indicaciones Generales:**
 
 ## **Nombre del proyecto:** 'tercerapreentrega'
